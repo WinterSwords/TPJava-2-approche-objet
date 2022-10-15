@@ -24,7 +24,7 @@ public class TestListInt {
 				max=liste.get(i);
 			}
 		}
-		System.out.println("valeur max : "+liste.size());
+		System.out.println("valeur max : "+max);
 		
 		int min=0;
 		for(int i=0;i<liste.size();i++) {
