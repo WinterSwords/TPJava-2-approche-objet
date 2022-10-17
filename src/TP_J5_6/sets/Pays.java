@@ -12,7 +12,7 @@ public class Pays {
 	}
 	@Override
 	public String toString() {
-		return "Pays:"+nom+", population:"+nbHabitant+", PIB/hab:"+pibHab;
+		return "\nPays:"+nom+", population:"+nbHabitant+", PIB/hab:"+pibHab;
 	}
 	
 	public String getNom() {

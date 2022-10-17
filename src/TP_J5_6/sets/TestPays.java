@@ -5,6 +5,7 @@ import java.util.HashSet;
 public class TestPays {
 	public static void main(String[] args) {
 		//TODO Pas fini
+		//Q1
 		HashSet<Pays> hash = new HashSet<>();
 		hash.add(new Pays("USA",334805268,22939*Math.pow(10, 9)));
 		hash.add(new Pays("France",65584514,2500*Math.pow(10, 9)));
@@ -22,14 +23,17 @@ public class TestPays {
 		double maxPib_Pib=0;
 		
 		for(Pays hashTemp : hash) {
-			if(maxPibHab_PibHab<hashTemp.pibHab) {
+			//Q2
+			if(maxPibHab_PibHab<hashTemp.pibHab) {//pays avec le plus grand PIB/hab
 				maxPibHab_PibHab=hashTemp.pibHab;
 				maxPibHab_Pays=hashTemp.nom;
 			}
-			if(maxPib_Pib<(hashTemp.pibHab*hashTemp.nbHabitant)) {
-				maxPib_Pib=(hashTemp.pibHab*hashTemp.nbHabitant);
+			//Q3
+			if(maxPib_Pib<(hashTemp.pibHab*hashTemp.nbHabitant)) {//pays le plus plus grand PIB
+				maxPib_Pib=(hashTemp.pibHab*hashTemp.nbHabitant);//PIB=PIB/hab *hab
 				maxPib_Pays=hashTemp.nom;
 			}
+			
 			
 		}
 		System.out.println("Pays avec le plus grand PIB/hab : "+maxPibHab_Pays);

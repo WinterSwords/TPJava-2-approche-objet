@@ -2,46 +2,31 @@ package TP_J5_6.maps;
 
 import TP_J5_6.listes.Ville;
 import java.util.HashMap;
-import java.util.Iterator;
 
 public class MapsVilles {
 	public static void main(String[] args) {
-		HashMap <Ville, String> map = new HashMap <>();
-		map.put(new Ville ("Reykjavik",2), "Reykjavik");
-		map.put(new Ville ("Stockholm",5), "Stockholm");
+		HashMap <String, Ville> map = new HashMap <>();
+		map.put("Reykjavik", new Ville ("Reykjavik",2));
+		map.put("Stockholm", new Ville ("Stockholm",5));
 		
-		HashMap <Ville, String> mapTemp = new HashMap <>();
 		int minHab_hab = 100000000;
 		String minHab_ville="";
 		
-/*		map.forEach((u,t) -> {
-			if(minHab_hab>u.getNbHabitant()) {
-				minHab_hab=u.getNbHabitant();
-				minHab_ville=u.getVille();
+/*		map.forEach((nom,ville) -> {
+			if(minHab_hab>ville.getNbHabitant()) {
+				minHab_hab=ville.getNbHabitant();
+				minHab_ville=ville.getVille();
 			}
 		});
 */
-		//TODO fonctionne mais c'est moche
-		for(Ville h : map.keySet()) {//Récupérer le + petit
-			if(minHab_hab>h.getNbHabitant()) {
-				minHab_hab=h.getNbHabitant();
-			}
-		}
-		for(Ville h : map.keySet()) {//si c'est pas le plus petit → inserer dans mapTemp
-			if(minHab_hab==h.getNbHabitant()) {
+		for(Ville h : map.values()) {//si c'est pas le plus petit → inserer dans mapTemp
+			if(minHab_hab>=h.getNbHabitant()) {
 				minHab_hab=h.getNbHabitant();
 				minHab_ville=h.getVille();
-			}else {
-				mapTemp.put(h, h.getVille());
 			}
 		}
 		
-		Ville villeSupp = new Ville(minHab_ville,minHab_hab);
-		map.remove(villeSupp, minHab_ville);//fonctionne pas
-		
-		//
-		map.clear();
-		map.putAll(mapTemp);
-		map.forEach((ville,nom) -> System.out.println(nom));
+		map.remove(minHab_ville);
+		map.forEach((nom,ville) -> System.out.println(ville));
 	}
 }
