@@ -4,7 +4,6 @@ import TP8.fr.diginamic.banque.entites.*;
 
 public class TestOperation {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Operation[] tablOp = new Operation[4];
 		tablOp[0] = new Credit("10 semptembre", 50);
 		tablOp[1] = new Debit("15 janvier", 500);

@@ -1,6 +1,6 @@
 package TP_J5_6.listes;
 
-public class Ville {
+public class Ville implements Comparable<Ville>{
 	String ville;
 	int nbHabitant;
 	public Ville(String ville, int nbHabitant) {
@@ -8,8 +8,17 @@ public class Ville {
 		this.nbHabitant = nbHabitant;
 	}
 	public String toString(){
-		return "nom : "+ville+", Habitant : "+nbHabitant;
+		return "\nnom : "+ville+", Habitant : "+nbHabitant;
 	}
+	
+	//compareTo : Ajout TP 13
+	@Override
+	public int compareTo(Ville autreVille) {
+		 //return this.ville.compareTo(autreVille.getVille());//tri par nom
+		return nbHabitant-autreVille.getNbHabitant();//tri par habitant
+	}
+	
+	//Get et set
 	public String getVille() {
 		return ville;
 	}

@@ -14,7 +14,7 @@ public class FusionList {
 		liste2.add("Orange");
 		
 		
-		//TODO Développements à réaliser ci-dessous
+		//Développements à réaliser ci-dessous
 		ArrayList<String> liste3 = new ArrayList<String>();
 		for(int i=0;i<liste1.size();i++) {
 			liste3.add(liste1.get(i));

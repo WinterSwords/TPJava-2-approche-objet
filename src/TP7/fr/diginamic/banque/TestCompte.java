@@ -4,7 +4,6 @@ import TP7.fr.diginamic.banque.entites.*;
 
 public class TestCompte {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		CompteTaux c1 = new CompteTaux(1,200,0.5);
 		System.out.println(c1);//quand que c1 prinln execute c1.toString
 		

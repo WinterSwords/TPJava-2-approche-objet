@@ -4,7 +4,6 @@ import TP1.entites2.Personne;
 
 public class TestPersonne {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		Personne pers1 = new Personne();
 		AdressePostale adresse1 = new AdressePostale();

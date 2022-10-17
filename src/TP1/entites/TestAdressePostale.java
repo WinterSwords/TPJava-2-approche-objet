@@ -2,8 +2,6 @@ package TP1.entites;
 
 public class TestAdressePostale {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
 		AdressePostale adresse1 = new AdressePostale();
 		adresse1.codePostale=35120;
 		adresse1.numeroDeRue=123;
