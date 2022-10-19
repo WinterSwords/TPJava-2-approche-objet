@@ -1,23 +1,23 @@
 package TP_J5_6.fichier;
 
 public class Ville {
-	String nom;
+	String nomVille;
 	String codeDep;
 	String nomRegion;
 	int hab;
 	
-	public Ville(String nom, String codePostal, String nomRegion, int hab) {
-		this.nom = nom;
+	public Ville(String nomVille, String codePostal, String nomRegion, int hab) {
+		this.nomVille = nomVille;
 		this.codeDep = codePostal;
 		this.nomRegion = nomRegion;
 		this.hab = hab;
 	}
 	
 	public String getNom() {
-		return nom;
+		return nomVille;
 	}
-	public void setNom(String nom) {
-		this.nom = nom;
+	public void setNom(String nomVille) {
+		this.nomVille = nomVille;
 	}
 	public String getCodePostal() {
 		return codeDep;
